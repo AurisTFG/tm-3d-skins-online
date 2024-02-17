@@ -22,14 +22,14 @@ namespace Logger
         if (UI::Button("Clear Log")) Clear();
         UI::PushStyleVar(UI::StyleVar::FrameBorderSize, 1.5f);
         UI::PushStyleColor(UI::Col::Border, vec4(UI::GetStyleColor(UI::Col::Button).xyz, 1.0f));
-        lines = UI::InputTextMultiline("##logBuffer", lines, vec2(1000, 500));
+        lines = UI::InputTextMultiline("##logBuffer", lines, vec2(1000, 600));
         UI::PopStyleColor();
         UI::PopStyleVar();
     }
 
 }
 
-void Log(const string &in line)
+void Log(const string &in line = "")
 {
     Logger::Add(line);  
 }

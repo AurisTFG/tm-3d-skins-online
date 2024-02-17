@@ -1,5 +1,5 @@
 const string pluginName = Meta::ExecutingPlugin().Name;
-const bool isDev = pluginName.EndsWith("(dev)");
+const bool isDev = pluginName.ToLower().EndsWith("(dev)");
 const bool isClubAccess = OpenplanetHasFullPermissions();
 
 string windowLabel = "\\$ff0" + Icons::Exchange + (isDev ? "\\$d00 " : "\\$z ") + pluginName;
