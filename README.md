@@ -10,7 +10,7 @@ This plugin works by making the server use the unoptimized download URL for the 
 
 Please be aware that this plugin is currently unsigned and does not appear in Openplanet's plugin manager. There's a possibility it may never be officially included unless a better solution is found. To use this plugin, follow these manual steps:
 
-1. Download the plugin from the [tags](https://github.com/AurisTFG/tm-3d-skins-online/tags) tab on GitHub.
+1. Download the plugin **3DSkinsOnline.op** from the [releases](github.com/AurisTFG/tm-3d-skins-online/releases/latest) tab on GitHub.
 2. Place the downloaded plugin in your `"C:\Users\auris\OpenplanetNext\Plugins"` folder.
 3. Enable Developer Mode in Openplanet by navigating to `Developer -> Signature Mode -> Developer`.
 4. That's it! The plugin should be able to handle everything on it's own from now on.
