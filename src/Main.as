@@ -6,7 +6,7 @@ string windowLabel = "\\$ff0" + Icons::Exchange + (isDev ? "\\$d00 " : "\\$z ") 
 bool isWindowOpen = (isDev ? true : false);
 
 string g_SkinUrlInput = "";
-bool g_AutoUpdateSkinUrl = false;
+bool g_AutoUpdateSkinUrl = true;
 
 void Main() 
 {
@@ -112,7 +112,7 @@ void ChangeSkinUrl(const string &in skinUrl)
 
    uint64 skinUrlPtr = Dev::GetSkinUrlPtr();
    Log("SkinUrlPtr: " + Text::FormatPointer(skinUrlPtr));
-   if (!Dev::IsPtrValid(skinUrlPtr))
+   if (!Dev::IsPtrValid(skinUrlPtr, true))
    {
       TextFade::Start("No valid pointer was found. PLEASE REPORT THIS @auristfg", LogLevel::Error);
       return;

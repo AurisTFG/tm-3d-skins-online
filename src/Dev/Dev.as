@@ -1,11 +1,11 @@
 namespace Dev
 {
-    bool IsPtrValid(uint64 ptr)
+    bool IsPtrValid(uint64 ptr, bool isStringPtr = false)
     {
         return 
-            ptr > 0x100000 && 
-            ptr < Dev::BaseAddressEnd();
-            // ptr % 8 == 0;
+            ptr > 0xFFFFFFFF && 
+            ptr < Dev::BaseAddressEnd() &&
+            (isStringPtr ? true : ptr % 8 == 0); // pointers to strings dont use 8 byte alignment
     }
     
     uint64 GetSkinUrlPtr(const string &in _skinType = "Models/CarSport") // gets pointer to skin download url
@@ -26,7 +26,7 @@ namespace Dev
             if (skinType == _skinType)
             {
                 uint64 skinUrlPtr = Dev::ReadUInt64(ptr + i * structSize + 0x78);
-                if (!IsPtrValid(skinUrlPtr)) return 0;
+                if (!IsPtrValid(skinUrlPtr, true)) return 0;
 
                 return skinUrlPtr;
             }
