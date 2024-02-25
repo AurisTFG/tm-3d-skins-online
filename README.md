@@ -16,3 +16,7 @@ Please be aware that this plugin is currently unsigned and does not appear in Op
 4. That's it! The plugin should be able to handle everything on it's own from now on.
 
 Feel free to reach out if you have any questions or encounter issues. Happy trolling!
+
+## Important Note 2
+
+As of the beginning of 2024, it appears that all types of skins, both 2D and 3D, do not contain an optimized URL in the API. Therefore, they just work without the need for any plugins. If you wish to use a 3D skin from 2023 online, simply re-upload the skin while also making a minor modification in the skin .zip file to ensure its recognition as new (e.g. adding a random .txt file). Do not forget that certain limitations, such as dimension and vertex count constraints, still remain relevant. Although a plugin to break these limits on the client side would be kinda fun, it may or may not be done at some point in the future.
